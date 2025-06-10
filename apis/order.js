@@ -24,7 +24,7 @@ OrderRouter.post("/", async (req, res) => {
   }
 });
 
-// 2. find a order
+// 2. find an order
 OrderRouter.get("/:orderId", async (req, res) => {
   try {
     const result = await Order.find({

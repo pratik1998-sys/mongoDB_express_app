@@ -2,10 +2,9 @@
 
 import mongoose from "mongoose";
 import express from "express";
-import { OrderSchema } from "./schema/Order.js";
-import { CustomerSchema } from "./schema/customer.js";
 import { CustomerRouter } from "./apis/customer.js";
 import { OrderRouter } from "./apis/order.js";
+import { CategoryRouter } from "./apis/category.js";
 
 export const app = express();
 app.use(express.json());
@@ -14,6 +13,7 @@ const PORT = 5000;
 // Use routes
 app.use("/customer", CustomerRouter);
 app.use("/order", OrderRouter);
+app.use("/category", CategoryRouter);
 
 // MongoDB connection
 mongoose
